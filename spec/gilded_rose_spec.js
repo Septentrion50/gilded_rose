@@ -1,5 +1,5 @@
 var { Shop } = require('../src/gilded_rose.js');
-var { Item } = require('../src/Item.js');
+var { Item } = require('../src/item.js');
 
 describe("GildedRose shop manager", function () {
   var listItems;
