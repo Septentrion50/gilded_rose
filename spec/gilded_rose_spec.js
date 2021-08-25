@@ -51,7 +51,7 @@ describe("GildedRose shop manager", function () {
     const items = gildedRose.updateQuality();
 
     const expected = [
-      { sellIn: 9, quality: 32 },
+      { sellIn: 9, quality: 31 },
       { sellIn: 8, quality: 32 }
     ];
     expected.forEach((testCase, idx) => {
@@ -68,7 +68,7 @@ describe("GildedRose shop manager", function () {
     const items = gildedRose.updateQuality();
 
     const expected = [
-      { sellIn: 4, quality: 33 },
+      { sellIn: 4, quality: 31 },
       { sellIn: 3, quality: 33 }
     ];
     expected.forEach((testCase, idx) => {
