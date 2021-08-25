@@ -43,7 +43,7 @@ describe("GildedRose shop manager", function () {
     });
   });
 
-  it("Augmenter la qualité de 2 si il reste 10 jours ou moins pour Aged Brie et Backstage passes", () => {
+  it("Augmenter la qualité de 2 si il reste 10 jours ou moins pour Backstage passes", () => {
     listItems.push(new Item("Aged Brie", 10, 30));
     listItems.push(new Item("Backstage passes to a TAFKAL80ETC concert", 9, 30));
 
@@ -60,7 +60,7 @@ describe("GildedRose shop manager", function () {
     });
   });
 
-  it("Augmenter la qualité de 3 si il reste 5 jours ou moins pour Aged Brie et Backstage passes", () => {
+  it("Augmenter la qualité de 3 si il reste 5 jours ou moins pour Backstage passes", () => {
     listItems.push(new Item("Aged Brie", 5, 30));
     listItems.push(new Item("Backstage passes to a TAFKAL80ETC concert", 4, 30));
 
