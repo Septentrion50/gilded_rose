@@ -29,21 +29,22 @@ class Shop {
 
   updateQuality() {
     this.items.map((item) => {
-      switch (item.name) {
-        case "Backstage passes to a TAFKAL80ETC concert":
-          this.agePass(item);
-          break;
-        case "Aged Brie":
-          this.ageBrie(item);
-          break;
-        case "Sulfuras, Hand of Ragnaros":
-          break;
-        case /^Conjured [\w ]+$/gm.test(item.name):
-          item.updateQuality(2);
-          break;
-        default:
-          item.updateQuality();
-          break;
+      if (/^Conjured.*/.test(item.name)) {
+        item.updateQuality(2);
+      } else {
+        switch (item.name) {
+          case "Backstage passes to a TAFKAL80ETC concert":
+            this.agePass(item);
+            break;
+          case "Aged Brie":
+            this.ageBrie(item);
+            break;
+          case "Sulfuras, Hand of Ragnaros":
+            break;
+          default:
+            item.updateQuality();
+            break;
+        }
       }
     });
 
