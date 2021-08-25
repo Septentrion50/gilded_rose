@@ -161,4 +161,21 @@ describe("GildedRose shop manager", function () {
     });
   })
 
+  it("La qualité d'un objet Conjured se dégrade deux fois plus rapidement", () => {
+    listItems.push(new Item("Ring", 20, 30));
+    listItems.push(new Item("Conjured ring", 20, 30));
+
+    const gildedRose = new Shop(listItems);
+    const items = gildedRose.updateQuality();
+
+    const expected = [
+      { sellIn: 19, quality: 29 },
+      { sellIn: 19, quality: 28 },
+    ];
+    expected.forEach((testCase, idx) => {
+      expect(items[idx].quality).toBe(testCase.quality);
+      expect(items[idx].sellIn).toBe(testCase.sellIn);
+    });
+  })
+
 });
